@@ -73,3 +73,132 @@ Joaquín.
 
 </body>
 </html>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#09091f,#111138,#1c1c52);
+color:white;
+overflow-x:hidden;
+}
+
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 1px, transparent 1px);
+background-size:70px 70px;
+background-position:0 0,35px 35px;
+opacity:.35;
+animation:starsMove 60s linear infinite;
+z-index:-2;
+}
+
+@keyframes starsMove{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-400px);
+}
+}
+
+.inicio{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:70px;
+color:#ff9ecf;
+text-shadow:0 0 20px rgba(255,158,207,.7);
+margin-bottom:20px;
+}
+
+.subtitulo{
+font-size:22px;
+opacity:.9;
+margin-bottom:40px;
+}
+
+button{
+background:#ff4f91;
+color:white;
+border:none;
+padding:18px 35px;
+border-radius:40px;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 0 20px rgba(255,79,145,.5);
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff6aa7;
+}
+
+.carta{
+max-width:900px;
+margin:auto;
+padding:80px 30px;
+line-height:2;
+font-size:22px;
+}
+
+.carta h2{
+text-align:center;
+font-family:'Great Vibes',cursive;
+font-size:60px;
+color:#ffd6ea;
+margin-bottom:40px;
+}
+
+.oculto{
+display:none;
+}
+
+#textoCarta{
+background:rgba(255,255,255,.08);
+padding:35px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,255,255,.08);
+}
+
+@media(max-width:700px){
+
+h1{
+font-size:48px;
+}
+
+.carta h2{
+font-size:42px;
+}
+
+.subtitulo{
+font-size:18px;
+}
+
+button{
+font-size:18px;
+padding:15px 30px;
+}
+
+#textoCarta{
+font-size:18px;
+}
+
+}
